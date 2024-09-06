@@ -16,11 +16,13 @@ https://sharovarskyi.com/blog/posts/clangsharp-dotnet-interop-bindings/
 
 ```
 ClangSharpPInvokeGenerator `
+ClangSharpPInvokeGenerator `
     -c multi-file generate-file-scoped-namespaces generate-helper-types `
     --file zmusic.h `
     -n ZMusicInterop `
     --libraryPath zmusic.dll `
-    --methodClassName ZMusic -o ZMusic.cs
+    --methodClassName ZMusic `
+    -o ZMusicInterop
 ```
 
 4. The generated code includes an undefined type called `_Anonymous_e__Struct`, which prevents the build from succeeding. According to the reference, this can be resolved by mapping the type. However, I took an ad-hoc approach and replaced `_Anonymous_e__Struct` with `void`.
