@@ -16,7 +16,6 @@ https://sharovarskyi.com/blog/posts/clangsharp-dotnet-interop-bindings/
 
 ```
 ClangSharpPInvokeGenerator `
-ClangSharpPInvokeGenerator `
     -c multi-file generate-file-scoped-namespaces generate-helper-types `
     --file zmusic.h `
     -n ZMusicInterop `
